@@ -1,2 +1,7 @@
 # Arduino_Projects
-Programs written for various Arduino projects!
+Welcome! This repository contains programs written for various Arduino projects!
+
+Projects so far include: 
+
+1. Motion-activated servo motor
+
