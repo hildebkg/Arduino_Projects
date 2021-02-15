@@ -13,7 +13,6 @@ int val = 0;                 // variable for sensor
 
 void setup() {
 // code that runs once
-
   pinMode(sensor, INPUT);    // initialize sensor as an input
   servo.attach(pinM);        // tells board which pin the servo motor is attached to
 }
@@ -26,11 +25,9 @@ void loop(){                 // code that runs repeatedly
     delay(1000);
     servo.write(0);
     delay(1000);
-    
   } 
   else {
       servo.write(0);        // turn servo OFF
       delay(1000);           // wait one second 
-      
   }
 }
