@@ -1,7 +1,7 @@
-// This is the code that I made for our first project in ENED 1100. Our goal was to create a motion-activated hand sanitizer dispenser.
-// The idea was to use a PIR sensor combined with a servo motor to dispense sanitizer from a bottle. When the PIR sensor detected motion,
-// the servo motor, which was attached to the bottom of the bottle, would  move once and allow hand sanitizer to fall out before moving 
-// back to its original position to again block the flow of the hand sanitizer.
+/* This is the code that I made for our first project in ENED 1100. Our goal was to create a motion-activated hand sanitizer dispenser. 
+The idea was to use a PIR sensor combined with a servo motor to dispense sanitizer from a bottle. When the PIR sensor detected motion,
+the servo motor, which was attached to the bottom of the bottle, would  move once and allow hand sanitizer to fall out before moving 
+back to its original position to again block the flow of the hand sanitizer. */
 
 #include <Servo.h>           // makes use of the servo library that is available for use with Arduino boards
 Servo servo;
@@ -18,8 +18,7 @@ void setup() {
   servo.attach(pinM);        // tells board which pin the servo motor is attached to
 }
 
-void loop(){
-// code that runs repeatedly
+void loop(){                 // code that runs repeatedly
 
   val = digitalRead(sensor); // read sensor value
   if (val == HIGH) {         // check if the sensor is HIGH
