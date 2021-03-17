@@ -12,22 +12,19 @@ int state = LOW;             // default: no motion detected
 int val = 0;                 // variable for sensor
 
 void setup() {
-// code that runs once
   pinMode(sensor, INPUT);    // initialize sensor as an input
   servo.attach(pinM);        // tells board which pin the servo motor is attached to
 }
 
-void loop(){                 // code that runs repeatedly
-
+void loop() {                 // code that runs repeatedly
   val = digitalRead(sensor); // read sensor value
   if (val == HIGH) {         // check if the sensor is HIGH
     servo.write(90);         // servo motor moves back and forth once
     delay(1000);
     servo.write(0);
     delay(1000);
-  } 
-  else {
+  } else {
       servo.write(0);        // turn servo OFF
       delay(1000);           // wait one second 
-  }
+    }
 }
